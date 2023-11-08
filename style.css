@@ -3,12 +3,30 @@
     padding: 0;
     font-family: Poppins;
 }
+/* .banner{
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(https://cdn.pixabay.com/photo/2016/11/15/07/09/photo-manipulation-1825450_1280.jpg);
+    background-size: cover;
+    background-position: center;
+} */
+.links a{
+    position: relative;
+}
 body{
     background-color: #dadada;
     overflow-x: hidden;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.292),rgba(0, 0, 0, 0)),url(https://cdn.pixabay.com/photo/2017/08/08/00/33/constellations-2609647_1280.jpg);
+    background-image: no-repeat;
+    background-size: contain;
 }
 body::-webkit-scrollbar{
     display: none;
+}
+.wrap{
+    position: sticky;
+    top: 0;
+    z-index: 99999;
 }
 .navbar{
     display: flex;
@@ -17,11 +35,70 @@ body::-webkit-scrollbar{
     background-color: #323946;
     padding: 10px 30px;
     color: white ;
+    height: 50px;
+    z-index: 9999;
 }
 .links a{
     padding: 0 40px;
     text-decoration: none;
     color: white ;
+    text-transform: uppercase;
+}
+.links a::after{
+    content: '';
+    height: 3px;
+    width: 0%;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.5s;
+}
+.links a:hover:after{
+    width: 100%;
+}
+.links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+} 
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+button{
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #009688;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+span{
+    background: #009688;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+button:hover span{
+    width: 100%;
+}
+button:hover{
+    border: none;
+}
+.button{
+    position: relative;
 }
 
 /* .content .link {
@@ -73,6 +150,54 @@ body::-webkit-scrollbar{
     width: 400px;
     padding: 10px;
     border-radius: 26px;
+    position: relative;
+}
+.action img{
+    height: 300px;
+}
+.drama img{
+    height: 300px;
+}
+.comedy img{
+    height: 300px;
+}
+.romance img{
+    height: 300px;
+}
+.thriller img{
+    height: 300px;
+}
+.horror img{
+    height: 300px;
+}
+.fantacy img{
+    height: 300px;
+    object-fit: cover;
+}
+.sci-fi img{
+    height: 300px;
+}
+.adventure img{
+    height: 300px;
+    object-fit:fill;
+}
+.animation img{
+    height: 300px;
+}
+.historical img{
+    height: 300px;
+}
+.documentary img{
+    height: 300px;
+}
+.crime img{
+    height: 300px;
+}
+.narrative img{
+    height: 300px;
+}
+.war img{
+    height: 300px;
 }
 .section img{
     width: 400px;
@@ -82,15 +207,25 @@ body::-webkit-scrollbar{
     filter: saturate(200%);
     filter: hue-rotate(40%);
 }
-
+a h2{
+    color: black;
+    display: none;
+}
+.navbar h2 a{
+    color:whitesmoke;
+}
 .section h2{
     display: none;
-    top: 50%;
-    left:30%;
+    
 }
-/* .section img:hover{
+.section img:hover{
     filter: blur(10px)
 }
-.section img:hover ~ .section h2{
+.section:hover h2{
     display: block;
-} */
+    position: absolute;
+    top: 50%;
+    left:40%;
+    font-size: 30px;
+    font-weight: 600;
+}
