@@ -99,7 +99,7 @@ button:hover{
 }
 .wrapper{
     position: relative;
-    background: ;
+    /* background: ; */
 }
 .wrapper .button{
     position: absolute;
@@ -219,13 +219,15 @@ a h2{
 .navbar h2 a{
     color:whitesmoke;
 }
+
 .section h2{
     display: none;
-    
 }
+
 .section img:hover{
     filter: blur(10px)
 }
+
 .section:hover h2{
     display: block;
     position: absolute;
