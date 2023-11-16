@@ -1,0 +1,293 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+   <link rel="stylesheet" href="contact.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div class="wrap">
+        <div class="navbar">
+          <img src="trailers-logos_white.png" class="logo" />
+          <h2 style="font-size: xx-large"><a href="index.html">Trailers.com</a></h2>
+          <div class="links">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="content">
+          <div class="link">
+            <a href="action.html">Action</a>
+            <a href="drama.html">Drama</a>
+            <a href="comedy.html">Comedy</a>
+            <a href="#">Romance</a>
+            <a href="thriller.html">Thriller</a>
+            <a href="horror.html">Horror</a>
+            <a href="#">Fantasy</a>
+            <a href="#">Adventure</a>
+            <a href="sci-fi.html">Sci-Fi</a>
+            <a href="#">Animation</a>
+            <a href="#">Documentary</a>
+            <a href="#">Historical Fiction</a>
+            <a href="#">Crime</a>
+            <a href="#">War</a>
+            <a href="#">Narrative</a>
+            <a href="#">Ratings</a>
+          </div>
+        </div>
+      </div>
+    <div class="container">
+        <div class="form-container" id="form-conatiner">
+
+          <div class="info">
+            <div class="pack">
+
+                <div class="text">
+                    <h3>Get In Touch</h3>
+                </div>
+
+                <div class="text">
+                    <h4>Email id :- </h4>
+                    <span>movietrailor0@gmail.com</span>
+                </div>
+
+                <div class="text">
+                    <h4>Conatact Number :- </h4>
+                    <span>+91-0000000000</span>
+                </div>
+
+                <div class="text">
+                    <h4>Address :- </h4>
+                    <span>Mumbai,India</span>
+                </div>
+
+           <div class="social-button">
+            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i> </a>
+            <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i> </a>
+            <a href=""> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            
+           </div>
+
+            </div>
+
+
+          </div>
+
+          <form action="#" name="formgroup">
+            
+            <div class="input-control">
+                <label for="Name">Name</label><br>
+                <input type="text" placeholder="Enter your Name" id="name">
+            </div>
+
+            <div class="input-control">
+                <label for="Email">Email</label><br>
+                <input type="email" placeholder="Enter your Email" id="email">
+            </div>
+
+            <div class="input-control">
+                <label for="Conatact">Conatact Number</label><br>
+                <input type="text" placeholder="Enter your Conatact Number" id="phone">
+            </div>
+
+            <!-- <div class="input-control">
+                <label for="Subject">Subject</label><br>
+                <input type="text" placeholder="Enter your Subject" id="subject"> 
+            </div> -->
+          
+            <div class="input-control">
+                <label for="Message">Message</label><br>
+                <textarea name="" id="message" rows="3" placeholder="Enter your Message..."></textarea>
+            </div>
+
+            <div class="input-control">
+
+                <button type="button" onclick="sendemail()">Send</button>
+            </div>
+
+            </form>
+
+        </div>
+   
+
+        <!--success popup code start -->
+
+
+        <div class="popup" id="popup">
+         <div class="check">
+            <i class="fa fa-check-square" aria-hidden="true"></i>
+            <div class="para">Suceessfull</div>
+            <p>your data successfully received</p>
+            <button class="ok" onclick="remove()">OK</button>
+         </div>
+
+        </div>
+         <!--success popup code end -->
+
+
+         
+        <!-- error popup code start-->
+        <div class="wrong" id="wrong">
+            <div class="check">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+               <div class="para">Something wrong....</div>
+               <p>Your data is not Received</p>
+               <button class="ok" onclick="wrongremove()">OK</button>
+            </div>
+   
+           </div>
+
+        <!-- error code end -->
+
+    </div><div class="wrapper">
+        <div class="button">
+          <button type="button"><span></span>EXPLOR MORE</button>
+          <button type="button"><span></span>SUBSCRIBE</button>
+        </div>
+    </div>
+    
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        
+        function sendemail(){
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+            // var sub = document.getElementById("subject").value;
+            var mess = document.getElementById("message").value;
+            
+            var body = "Name :" + name + "<br/>Email :" + email + "<br/>phone number: " + phone + "<br/>User Message:" + mess;
+            
+            
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "movietrailor0@gmail.com",
+                Password : "A86B017336EA9F89BBC19F7026D31753B958",
+                To : "movietrailor0@gmail.com",
+                From : "movietrailor0@gmail.com",
+                Subject : sub,
+                Body : body
+            }).then(
+                message => {
+                    if(message=='OK'){
+                        document.getElementById("popup").classList.add("frame");
+                        document.getElementById("popup").style.visibility="visible"; 
+                        document.getElementById("form-conatiner").style.visibility="hidden";
+                        document.formgroup.reset();
+                    }
+                    else{
+                        console.error(message);
+                        document.getElementById("wrong").classList.add("frame");
+                        document.getElementById("wrong").style.visibility="visible"; 
+                        document.getElementById("form-conatiner").style.visibility="hidden";
+                    }
+                }
+                ); 
+                
+                // confirm mail
+                
+                var design = `<div style="display: grid; width: 100%; place-items: center;">
+                    
+                    <div style="width: 95%; height: 90px; background-color: #34568b;">
+                        <p style="text-align: center; font-size: 30px; color: white;">Education Analysist</p>
+                        </div>
+                        
+                        <div style="margin-top: 15px;">
+                            <p style="font-size: 22px; text-align: center;">Thank You Your Data successfully Received</p>
+                            </div>
+                            ga
+                            <div>
+                                <p style="font-size: 15px;">thank this is my official youtube channel thank so muc to show interest my video 
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, possimus! Lorem ipsum dolor sit amet consectetur 
+                                    adipisicing elit. Unde ab adipisci veritatis placeat quas earum dolores magnam quam, vel impedit!
+                                    </p>
+                                    </div>
+<div>
+    <p style="font-size: 25px; text-align: center;">Please Subscibe my channel</p>
+    </div>
+    
+    </div>`
+    
+    
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "examplemail638@gmail.com",
+        Password : "262C4BB58815A9031B0F2B75BD40DCEDA76A",
+        To : email,
+        From : "examplemail638@gmail.com",
+        // Subject : "Mail from Education Analysist",
+        Body : design
+    })
+    
+}
+
+function remove(){
+    document.getElementById("popup").classList.remove("frame");
+    document.getElementById("popup").style.visibility="hidden";
+    document.getElementById("form-conatiner").style.visibility="visible";
+}
+
+function wrongremove(){
+    document.getElementById("wrong").classList.remove("frame");
+    document.getElementById("wrong").style.visibility="hidden"; 
+    document.getElementById("form-conatiner").style.visibility="visible"; 
+    
+}
+
+
+</script>
+
+</body>
+</html><!-- <!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Contact Us</title>
+            <link rel="stylesheet" href="contact.css">
+        </head>
+        <body>
+            <div class="container">
+                <form onsubmit="sendEmail(); reset(); return false;">            
+                    <h3>GET IN TOUCH</h3>
+                    <input type="text" id="name" placeholder="Your Name" required>
+                    <input type="email" id="email" placeholder="Email id" required>
+                    <input type="text" id="phone" placeholder="Phone no:" required>
+                    <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+            <script src="https://smtpjs.com/v3/smtp.js"></script>
+            <script>
+                function sendEmail(){
+                    // let Name = document.getElementById("name").value;
+                    // let Email = document.getElementById("email").value;
+                    // let Phone  = document.getElementById("name").value;
+                    // let Message = document.getElementById("message").value;
+                    
+                    // let body = "Name:" + name + "<br> Email id:" + email + "<br> phone no:" + phone + "<br> message:";
+                    Email.send({
+                        Host : "smtp.elasticemail.com",
+                        Username : "movietrailor0@gmail.com",
+                Password : "A86B017336EA9F89BBC19F7026D31753B958",
+                To : 'dullboyzz23@gmail.com',
+                From : document.getElementById("email").value,
+                Subject : "New Contact Form Enquiry",
+                Body : "Name: "+ document.getElementById("name").value
+                   + "<br> Email: " + document.getElementById("email").value
+                   + "<br> Phone no: " + document.getElementById("phone").value
+                   + "<br> Message: " + document.getElementById("message").value
+            }).then(
+                    message => alert(message)
+                );
+        }
+    </script>
+</body>
+</html> -->
