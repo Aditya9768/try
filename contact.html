@@ -4,6 +4,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap"
+      rel="stylesheet"
+    />
    <link rel="stylesheet" href="contact.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    <link rel="stylesheet" href="navbar.css">
@@ -12,7 +16,7 @@
     <div class="wrap">
         <div class="navbar">
           <img src="trailers-logos_white.png" class="logo" />
-          <h2 style="font-size: xx-large"><a href="index.html">Trailers.com</a></h2>
+          <h2 style="font-size: xx-large"><a href="index.html">thetrailersbox.com</a></h2>
           <div class="links">
             <ul>
               <li><a href="index.html">Home</a></li>
@@ -26,19 +30,19 @@
             <a href="action.html">Action</a>
             <a href="drama.html">Drama</a>
             <a href="comedy.html">Comedy</a>
-            <a href="#">Romance</a>
+            <a href="romance.html">Romance</a>
             <a href="thriller.html">Thriller</a>
             <a href="horror.html">Horror</a>
-            <a href="#">Fantasy</a>
-            <a href="#">Adventure</a>
+            <a href="fantasy.html">Fantasy</a>
+            <a href="adventure.html">Adventure</a>
             <a href="sci-fi.html">Sci-Fi</a>
-            <a href="#">Animation</a>
-            <a href="#">Documentary</a>
-            <a href="#">Historical Fiction</a>
-            <a href="#">Crime</a>
-            <a href="#">War</a>
-            <a href="#">Narrative</a>
-            <a href="#">Ratings</a>
+            <a href="animation.html">Animation</a>
+            <a href="documentary.html">Documentary</a>
+            <a href="historical.html">Historical Fiction</a>
+            <a href="crime.html">Crime</a>
+            <a href="war.html">War</a>
+            <a href="narrative.html">Narrative</a>
+            <a href="https://www.imdb.com/">Ratings</a>
           </div>
         </div>
       </div>
@@ -54,24 +58,24 @@
 
                 <div class="text">
                     <h4>Email id :- </h4>
-                    <span>movietrailor0@gmail.com</span>
+                    <div>movietrailor0@gmail.com</div>
                 </div>
 
                 <div class="text">
                     <h4>Conatact Number :- </h4>
-                    <span>+91-0000000000</span>
+                    <div>+91-0000000000</div>
                 </div>
 
                 <div class="text">
                     <h4>Address :- </h4>
-                    <span>Mumbai,India</span>
+                    <div>Mumbai,India</div>
                 </div>
 
            <div class="social-button">
-            <a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
-            <a href=""><i class="fa fa-instagram" aria-hidden="true"></i> </a>
-            <a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i> </a>
-            <a href=""> <i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/trailersbox.com1?igshid=MzMyNGUyNmU2YQ=="><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/trailersbox.com1?igshid=MzMyNGUyNmU2YQ=="><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://instagram.com/trailerbox.com1?igshid=OGQ5ZDc2ODk2ZA=="><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61553901582961&mibextid=ZbWKwL"><i class="fa fa-facebook" aria-hidden="true"></i></a>
             
            </div>
 
@@ -97,10 +101,10 @@
                 <input type="text" placeholder="Enter your Conatact Number" id="phone">
             </div>
 
-            <!-- <div class="input-control">
+            <div class="input-control">
                 <label for="Subject">Subject</label><br>
                 <input type="text" placeholder="Enter your Subject" id="subject"> 
-            </div> -->
+            </div>
           
             <div class="input-control">
                 <label for="Message">Message</label><br>
@@ -109,7 +113,7 @@
 
             <div class="input-control">
 
-                <button type="button" onclick="sendemail()">Send</button>
+                <button class="bnt" type="button" onclick="sendemail()">Send</button>
             </div>
 
             </form>
@@ -160,7 +164,7 @@
             var name = document.getElementById("name").value;
             var email = document.getElementById("email").value;
             var phone = document.getElementById("phone").value;
-            // var sub = document.getElementById("subject").value;
+            var sub = document.getElementById("subject").value;
             var mess = document.getElementById("message").value;
             
             var body = "Name :" + name + "<br/>Email :" + email + "<br/>phone number: " + phone + "<br/>User Message:" + mess;
@@ -222,7 +226,7 @@
         Password : "262C4BB58815A9031B0F2B75BD40DCEDA76A",
         To : email,
         From : "examplemail638@gmail.com",
-        // Subject : "Mail from Education Analysist",
+        Subject : "Mail from Education Analysist",
         Body : design
     })
     
@@ -245,7 +249,8 @@ function wrongremove(){
 </script>
 
 </body>
-</html><!-- <!DOCTYPE html>
+</html>
+<!-- <!DOCTYPE html>
     <html lang="en">
         <head>
             <meta charset="UTF-8">

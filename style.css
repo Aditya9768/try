@@ -3,6 +3,11 @@
     padding: 0;
     font-family: Poppins;
 }
+
+.main div a img{
+    transform: translateX(1);
+    transition: transform 0.5s ease;
+}
 /* .banner{
     width: 100vw;
     height: 100vh;
@@ -218,8 +223,30 @@ a h2{
 }
 .navbar h2 a{
     color:whitesmoke;
+    text-decoration: none; 
 }
 
+.navbar h2 a:hover{
+    color: #0f0;
+    /* scale: 5.5; */
+    transition: 0.1s;
+}
+
+li a:hover{
+    color: #E3B448;
+    scale: 0.1;
+    transition: 0.1s;
+}
+
+.main img:hover{
+    scale: 1.1;
+}
+
+.logo:hover{
+    color: #E3B448;
+    scale: 1.5;
+    transition: 0.1s;
+}
 .section h2{
     display: none;
 }
@@ -236,3 +263,52 @@ a h2{
     font-size: 30px;
     font-weight: 600;
 }
+div h1{
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+
+.button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Add this to your existing CSS file or create a new one */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }
+
+  .content {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+  }
+
+  

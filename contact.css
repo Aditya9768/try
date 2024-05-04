@@ -52,8 +52,9 @@ body{
     color: white;
 }
 .info .social-button i:hover{
-    color: red;
+    color: yellow;
     scale: 1.5;
+    transition: 0.1s;
 }
 
 form{
@@ -203,4 +204,11 @@ form button:hover{
     }
 
 }
+
+/* .bnt{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+} */
 
