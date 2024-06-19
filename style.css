@@ -133,6 +133,7 @@ button:hover{
     overflow-y: hidden;
     overflow-x: auto;
     padding-top: 10px;
+    top: 72;
 
 }
 .content .link::-webkit-scrollbar{
